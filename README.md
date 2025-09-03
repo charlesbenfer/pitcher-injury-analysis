@@ -113,6 +113,6 @@ MIT License - See LICENSE file for details
 
 ## Contact
 
-Charles Benfer - [LinkedIn](https://www.linkedin.com/in/charlesbenfer)
+Charles Benfer - [LinkedIn](https://www.linkedin.com/in/charles-benfer-b6508a161/)
 
-Project Link: [https://github.com/[your-username]/pitcher-injury-analysis](https://github.com/[your-username]/pitcher-injury-analysis)
+Project Link: [https://github.com/charlesbenfer/pitcher-injury-analysis](https://github.com/charlesbenfer/pitcher-injury-analysis)
