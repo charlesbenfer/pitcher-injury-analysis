@@ -5,7 +5,7 @@ This repository contains the code and analysis for predicting MLB pitcher injuri
 ## Blog Post
 
 For a detailed walkthrough of the methodology and findings, see the full blog post:
-[Predicting Pitcher Injuries with Bayesian Survival Analysis](https://charlesbenfer.github.io/2025/09/02/bayesian-pitcher-injury.html)
+[Predicting Pitcher Injuries with Bayesian Survival Analysis](https://charlesbenfer.github.io/2025-09-02-bayesian-pitcher-injury/)
 
 ## Project Overview
 
@@ -43,7 +43,7 @@ pitcher_injury_analysis/
 
 ```bash
 # Clone the repository
-git clone https://github.com/[your-username]/pitcher-injury-analysis.git
+git clone https://github.com/charlesbenfer/pitcher-injury-analysis.git
 cd pitcher-injury-analysis
 
 # Create virtual environment
@@ -104,7 +104,7 @@ These features are likely more predictive than performance statistics alone.
 If you use this code or methodology, please cite:
 ```
 Benfer, C. (2025). Predicting Pitcher Injuries with Bayesian Survival Analysis.
-https://charlesbenfer.github.io/2025/09/02/bayesian-pitcher-injury.html
+https://charlesbenfer.github.io/2025-09-02-bayesian-pitcher-injury/
 ```
 
 ## License
