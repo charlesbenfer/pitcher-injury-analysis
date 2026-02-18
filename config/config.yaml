@@ -1,0 +1,90 @@
+# Configuration for pitcher injury analysis
+
+data:
+  raw_data_path: "data/raw"
+  processed_data_path: "data/processed"
+  external_data_path: "data/external"
+  
+  # Data sources
+  sources:
+    mlb_stats_api: "https://statsapi.mlb.com/api/v1"
+    baseball_reference: "https://www.baseball-reference.com"
+    fangraphs: "https://www.fangraphs.com"
+  
+  # Date range for analysis
+  start_year: 2015
+  end_year: 2024
+
+modeling:
+  # Bayesian model settings
+  mcmc:
+    chains: 4
+    draws: 2000
+    tune: 1000
+    target_accept: 0.9
+    
+  # Prior distributions
+  priors:
+    use_informative: true
+    
+  # Survival models to compare
+  models:
+    - "weibull"
+    - "exponential"
+    - "cox_proportional_hazards"
+    - "accelerated_failure_time"
+    
+  # Cross-validation
+  cv_folds: 5
+  test_size: 0.2
+  random_seed: 42
+
+features:
+  # Pitcher performance metrics
+  performance:
+    - "innings_pitched"
+    - "pitch_count"
+    - "fastball_velocity"
+    - "velocity_change"
+    - "spin_rate"
+    
+  # Workload metrics
+  workload:
+    - "days_rest"
+    - "pitches_per_game"
+    - "season_innings"
+    - "career_innings"
+    
+  # Biomechanical indicators
+  biomechanical:
+    - "release_point_consistency"
+    - "arm_angle"
+    - "stride_length"
+    
+  # Injury history
+  history:
+    - "previous_injuries"
+    - "days_since_last_injury"
+    - "injury_severity"
+
+visualization:
+  figure_size: [10, 6]
+  dpi: 100
+  style: "seaborn-v0_8-darkgrid"
+  
+analysis:
+  # Injury categories to track
+  injury_types:
+    - "shoulder"
+    - "elbow"
+    - "forearm"
+    - "back"
+    - "oblique"
+    - "other"
+    
+  # Severity levels
+  severity_levels:
+    minor: [1, 14]  # days on IL
+    moderate: [15, 60]
+    severe: [61, 365]
+    career_ending: [366, null]
